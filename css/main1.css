@@ -1,0 +1,227 @@
+* {
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    text-align: center;
+    margin-left: 350px;
+    width: 400px;
+    height: 200px;
+}
+
+.hidden {
+    display: none;
+}
+
+body {
+    background-color: rgb(102, 251, 251);
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(0, 0, 0);
+}
+
+.container {
+    width:1100px;
+    height: 1200px;
+    margin: 0px auto;
+    background-image: url(../images/note_page-1.png);
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+header > h1 {
+    text-align: center;
+    padding: 10px;
+}
+
+/*applies to all articles*/
+article {
+    width: 300px;
+    border: 4px solid white;
+    border-radius: 8px;
+    margin: 10px;
+    text-align: left;
+}
+
+article h2 {
+    color: rgb(251, 102, 102);
+    padding: 4px 8px; /*top and bottom left and right*/
+}
+
+article:first-of-type {
+    border: 4px solid rgb(251, 102, 102);
+}
+
+#inprogress {
+    border: 4px solid rgb(102,251,251);
+}
+
+#inprogress h2 {
+    color: rgb(102,251,251);
+}
+
+#done {
+    border: 4px solid rgb(120, 255, 120);
+}
+
+#done h2 {
+    color: green;
+}
+
+#complete {
+    width: 1000px;
+    height: 20px;
+    text-align: center;
+}
+
+ul {
+    list-style-type: none;
+}
+
+ul li {
+    padding: 6px 8px;
+    text-transform: uppercase;
+}
+
+
+.todo li:nth-child(odd) {
+    background-color: rgba(251, 102, 102, .2);
+}
+
+.inprogress li:nth-child(odd) {
+    background-color: rgba(102,251,251, .2);
+}
+
+.done li:nth-child(odd) {
+    background-color: rgba(120, 255, 120, 0.2);
+}
+
+#sticker1 input[type="checkbox"]:checked + span::after {
+    content: "\1F44D";
+    width: 25px;
+    height: 30px;
+    border-radius: 50%;
+    font-size: 24px;
+    animation: fadeIn 0.7s;
+}
+
+#sticker2 input[type="checkbox"]:checked + span::after {
+    content: "\1F44F";
+    width: 25px;
+    height: 30px;
+    border-radius: 50%;
+    font-size: 24px;
+    animation: fadeIn 0.7s;
+}
+
+#sticker3 input[type="checkbox"]:checked + span::after {
+    content: "\2713";
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: rgb(120, 255, 120);
+    font-size: 25px;
+    animation: fadeIn 0.7s;
+}
+
+@keyframes fadeIn {
+    from{opacity: 0;}
+    to{opacity: 1;}
+}
+
+
+label {
+    position: relative;
+    width: 160px;
+    height: 80px;
+    cursor: pointer;
+}
+
+label input {
+    position: relative;
+    z-index: 1;
+    appearance: none;
+}
+
+label span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    flex-wrap: wrap;
+    background: red;
+    border-radius: 80px;
+    transition: 0.5s;
+    box-shadow: 0 15px 25px #fe000066;
+}
+
+label input:checked ~ span {
+    background: green;
+    box-shadow: 0 15px 25px #00fe4866;
+}
+
+label span i {
+   position: absolute;
+   top: 4px;
+   left: 4px;
+   width: 72px;
+   height: 72px;
+   background: #fff;
+   border-radius: 50%;
+   transition: 0.5s; 
+}
+
+label input:checked ~ span i {
+    left: 84px;
+}
+
+label span i::before {
+    content: '';
+    position: absolute;
+    top: 22px;
+    left: 12px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #ff0000;
+    box-shadow: 30px 0 0 #ff0000;
+    transition: 0.5s;
+}
+
+label input:checked ~ span i::before {
+    background: green;
+    box-shadow: 31px 0 0 green;
+}
+
+label span i::after {
+    content: '';
+    position: absolute;
+    bottom: 15px;
+    left: 20px;
+    width: 30px;
+    height: 6px;
+    border-radius: 6px;
+    background: red;
+}
+
+label input:checked ~ span i::after{
+    left: 20px;
+    height: 15px;
+    bottom: 12px;
+    border-radius: 0;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    background: green;
+}
+
+
+
+
+

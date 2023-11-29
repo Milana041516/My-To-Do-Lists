@@ -1,0 +1,140 @@
+* {
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-size: 80px;
+}
+
+.hidden {
+    display: none;
+}
+
+body {
+    background-color: rgb(255, 255, 255);
+    font-size: 16px;
+    font-family: 'Kalam';
+    color: rgb(0, 0, 0);
+}
+
+.container {
+    width:1440px;
+    height: auto;
+    margin: 0px auto;
+    background-image: url(../images/corkboard.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 40px solid rgb(135,79,0);
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+header > h1 {
+    text-align: center;
+    padding: 10px;
+}
+
+/*applies to all articles*/
+article {
+    width: 500px;
+    border-radius: 8px;
+    margin: 0px;
+    text-align: left;
+    color: black;
+}
+
+article h2 {
+    color: rgb(0, 0, 0);
+    padding: 4px 8px; /*top and bottom left and right*/
+}
+
+#todo{
+    margin: 10px;
+    padding: 50px 70px 70px 70px;
+    background-image: url(../images/sticker.png);
+    background-size: 500px;
+}
+
+
+
+#inprogress {
+    margin: 10px;
+    padding: 50px 70px 70px 70px;
+    background-image: url(../images/sticker.png);
+    background-size: 500px;
+}
+
+
+#done {
+    margin: 10px;
+    padding: 50px 70px 70px 70px;
+    background-image: url(../images/sticker.png);
+    background-size: 500px;
+}
+
+
+
+ul {
+    list-style-type: none;
+}
+
+ul li {
+    padding: 6px 8px;
+    text-transform: uppercase;
+}
+
+/*
+.todo li:nth-child(odd) {
+    background-color: rgba(251, 102, 102, .2);
+}
+
+.inprogress li:nth-child(odd) {
+    background-color: rgba(102,251,251, .2);
+}
+
+.done li:nth-child(odd) {
+    background-color: rgba(120, 255, 120, 0.2);
+}
+*/
+
+
+#sticker1 input[type="checkbox"]:checked + span::after {
+    content: "\1F44D";
+    width: 25px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: green;
+    font-size: 20px;
+    animation: fadeIn 0.7s;
+}
+
+#sticker2 input[type="checkbox"]:checked + span::after {
+    content: "\1F44F";
+    width: 25px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: green;
+    font-size: 20px;
+    animation: fadeIn 0.7s;
+}
+
+#sticker3 input[type="checkbox"]:checked + span::after {
+    content: "\2713";
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: green;
+    font-size: 20px;
+    animation: fadeIn 0.7s;
+}
+
+@keyframes fadeIn {
+    from{opacity: 0;}
+    to{opacity: 1;}
+}
